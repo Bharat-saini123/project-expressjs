@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-color{
+    color:#482299;
+}
+.black-color{
+    color:#232323;
+}
+.bg-color{
+    background-color:#232323; 
+}
+.yellow-color{
+    /* background-color: yellow; */
+    color: yellow;
+}
+.light-blue{
+    color:lightblue;
+}
+
+.navbar a{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    transition: all 0.3s linear;
+}
+.fa-snowflake{
+    color: #482299;;
+}
+.navbar a:hover{
+    color: #482299;
+}
+/* .main-section{
+    margin-top: 10rem;
+} */
+
+
+.main{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    gap: 1rem;
+   
+    place-items: center;
+}
+.footer{
+    background-color: #232323;
+    color: #fff;
+    height: 50px;
+   margin-top: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 1.5rem;
+    
+}
+.about-sections{
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 1rem;
+   
+    place-items: center; 
+}
+
+
+
+
+
+/* responsive */
+
+
+
+
+
+
+
+
+
+
+/* wheather */
+.wheather-form{
+    margin: 5rem 0rem;
+    position: relative;
+}
+
+
+.wheather-form input[type="text"]{
+    width:100%;
+    display: block;
+    padding: 0.5rem 1.5rem;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    border: 2px solid #482299;
+   
+   
+}
+
+::placeholder{
+    text-transform: capitalize;
+   
+}
+.wheather-form .input-text{
+    width: 60rem;
+    margin: 0rem auto;
+    
+}
+
+
+
+.wheather-form  input[type="submit"]{
+    position: absolute;
+  background-color: #482299;
+    top:0px;
+   
+    right:27%;
+    height: 100%;
+    padding: 0.4rem 0.8rem;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    transition: all 0.5s ease-in-out
+    
+   
+   
+}
+.wheather-form  input[type="submit"]:hover{
+background-color: #fff;
+color:#482299;
+}
+
+
+
+.wheather-box-content-total{
+    width:35rem;
+    margin:0rem auto;
+    /* border: 3px solid red; */
+}
+
+.date-week{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border:2px solid gray; */
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: #232323ec;
+    color: white;
+    padding: 1rem;
+}
+.bi-cloud-drizzle-fill{
+    color:lightblue;
+    height: 10rem;
+    width: 10rem;
+    
+}
+.output{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    font-size: 5rem;
+    font-weight: 700;
+}
+.output-wheather{
+    color: white;
+    background-color: #232323;
+
+}
+
+.data-hide{
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+#my-wheather{
+    text-transform: capitalize;
+
+}
+
+
+
+
+@media(max-width:768px){
+    html{
+        font-size: 0.5rem;
+    }
+
+    .main{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr 1fr;
+    }
+    .about-sections{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr;
+        
+    }
+    .about-section-2{
+        margin: 0rem 2rem;
+
+
+    }
+    .wheather-form .input-text{
+        width: 40rem;
+    }
+    .wheather-form  input[type="submit"]{
+        right:35px;
+    }
+   
+
+
+}

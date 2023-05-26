@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css" integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Exp project</title>
+  </head>
+  <body>
+    {{>header}}
+
+
+
+
+<div class="wheather-main-content">
+
+
+<div class="wheather-content">
+
+<form action="" class="wheather-form">
+ 
+<div class="input-total"><div class="input-text"><input type="text" placeholder="Enter input here" autocomplete="off" id="cityName" class="input-w-1"></div></div>
+
+<input type="submit" value="Search" id="submitBtn" class="input-w-2">
+
+
+</form>
+
+
+
+</div>
+
+
+
+
+
+<div class="wheather-box-content-total">
+
+
+
+<div class="date-week">
+<p id="week">sunday</p>
+<p id="date">26/5/2023</p>
+
+
+
+</div>
+
+<div class="output-wheather ">
+<div  id="city_name" class="output-name" style="font-size: 2rem;text-transform:capitalize; padding:1rem;">
+    get out put here
+</div>
+
+{{!-- <div style="font-size: 5rem;padding:1rem">Delhi,id</div> --}}
+<div class="output data-hide">
+    
+
+    <div class="temp"><span id="temp">37.45</span>F</div>
+
+    <div id="temp_status">
+     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-drizzle-fill" viewBox="0 0 16 16">
+  <path d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm-3.5 1.5a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm.747-8.498a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973z"/>
+</svg></div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  {{>footer}}
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+
+<script>
+const subid=document.getElementById("submitBtn");
+
+const dateid=document.getElementById("date");
+const weekid=document.getElementById("week");
+
+
+
+ const dateChange=()=>{
+    
+    let  weekday=new Array(7);
+    weekday[0]="Sun";
+    weekday[1]="Mon"
+    weekday[2]="Tue"
+    weekday[3]="Wed"
+    weekday[4]="Thr"
+    weekday[5]="Fri"
+    weekday[6]="sat"
+    
+    
+        const currentDate=new Date();
+        const thisDay=currentDate.getDay();
+    
+    console.log(weekday[thisDay]);
+    return `${weekday[thisDay]}`
+    
+    }
+dateChange();
+
+    const monthChange=()=>{
+    
+        const monthDay=new Array(12);
+        monthDay[0]="Jan"
+        monthDay[1]="Feb"
+        monthDay[2]="Mar"
+        monthDay[3]="Apr"
+        monthDay[4]="May"
+        monthDay[5]="June"
+        monthDay[6]="July"
+        monthDay[7]="Aug"
+        monthDay[8]="Sep"
+        monthDay[9]="Oct"
+        monthDay[10]="Nov"
+        monthDay[11]="Dec"
+    
+    
+        const nowMonth=new Date();
+       const thisMonth=nowMonth.getMonth();
+       const thisyear=nowMonth.getFullYear();
+       console.log(monthDay[thisMonth]);
+       console.log(thisyear)
+       return `${monthDay[thisMonth]}/${thisyear} `
+    }
+    monthChange();
+
+
+    const timeChange=()=>{
+        const nowDate= new Date();
+        
+    let ampm;
+        let realTime
+       const thisTime=nowDate.getHours();
+       const thisMin=nowDate.getMinutes();
+       const thisSec=nowDate.getSeconds();
+    
+    if(thisTime>12){
+       realTime=12-thisTime;
+      
+       if(realTime<0){realTime=-realTime
+        
+       }
+       console.log(realTime)
+        
+    }
+    else{
+        realTime=thisTime
+    }
+    if(thisTime>11){
+        ampm="PM"
+    }else{
+        ampm="AM"
+    }
+    console.log(ampm)
+    
+    
+    console.log(thisMin)
+    console.log(thisSec)
+    
+    
+    return `   ${realTime}:${thisMin} ${ ampm}`
+    }
+    timeChange()
+    
+
+
+
+dateid.innerHTML=dateChange()+"/"+monthChange()
+
+weekid.innerHTML=timeChange()
+
+
+
+
+const output=document.querySelector(".output");
+const temp_status=document.getElementById("temp_status");
+const temp=document.getElementById("temp")
+
+const city_name=document.getElementById("city_name");
+const cityName=document.getElementById("cityName");
+const myFunc=async(event)=>{
+    event.preventDefault();
+   
+    const cityval=cityName.value
+if(cityval==""){
+city_name.innerText="Please write the name before Search"
+output.classList.add("data-hide")
+
+
+
+}else{
+
+
+    try{
+    let url=`https://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&appid=c6fbe0846f738f1801a13d325197d861`
+      const response=await fetch(url);
+
+      const data= await response.json();
+      const arrayData=[data];
+      console.log(arrayData)
+      temp.innerText=arrayData[0].main.temp
+      temp_status.innerText=arrayData[0].weather[0].main
+      city_name.innerText=`${arrayData[0].name},${arrayData[0].sys.country}`
+
+console.log(temp_status.innerText)
+ let tempMood=arrayData[0].weather[0].main;
+ console.log(tempMood)
+  if(tempMood==="Clouds"){
+
+    temp_status.innerHTML='<i class="fa-solid fa-cloud fa-beat light-blue"></i>'
+  }
+  else if(tempMood==="Haze"){
+    temp_status.innerHTML='<i class="fa-solid fa-sun fa-bounce yellow-color"></i>'
+  }
+  else if(tempMood==="Rain"){
+    temp_status.innerHTML='<i class="fa-solid fa-cloud fa-beat light-blue"></i>'
+  }
+  else{temp_status.innerHTML='<i class="fa-solid fa-sun fa-bounce yellow-color"></i>'
+    
+ }
+output.classList.remove("data-hide")
+}catch{
+city_name.innerText="Please enter the city name properly"
+output.classList.add("data-hide")
+
+}
+}
+
+
+}
+
+
+
+subid.addEventListener("click",myFunc)
+
+</script>
+    
+  </body>
+</html>
