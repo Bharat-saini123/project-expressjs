@@ -1,10 +1,16 @@
+const dotenv=require("dotenv");
+dotenv.config({
+    path:"../.env"
+})
 const express=require("express");
 const path=require("path");
 const hbs=require("hbs");
 
 
 
-const port=process.env.PORT || 3000;
+
+
+const PORT=process.env.PORT || 3000;
 
 
 
@@ -99,8 +105,8 @@ app.get("/about",(req,res)=>{
 
 
 
-        app.listen(port,"127.0.0.1",()=>{
+        app.listen(PORT,"127.0.0.1",()=>{
 
 
-            console.log(`you are  work ${port} and it is work properly`)
+            console.log(`you are  work ${PORT} and it is work properly`)
         })
